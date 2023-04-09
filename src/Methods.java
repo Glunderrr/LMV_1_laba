@@ -2,13 +2,14 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.StandardCopyOption;
 import java.nio.file.attribute.BasicFileAttributes;
 import java.text.SimpleDateFormat;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.Scanner;
-
 class Methods {
     private final static Scanner in = new Scanner(System.in);
 
@@ -71,9 +72,9 @@ class Methods {
         System.out.println("Приклад імені файлу: диск:\\папка\\назва.формат(якщо це не папка)");
 
         System.out.println("Старе ім'я файлу:");
-        String oldFileName = scanner.nextLine();
+        String oldFileName = in.nextLine();
         System.out.println("Нове ім'я файлу:");
-        String newFileName = scanner.nextLine();
+        String newFileName = in.nextLine();
 
         File oldFile = new File(oldFileName);
 
@@ -99,11 +100,11 @@ class Methods {
     static void DATE() {
         int day, month, year;
         System.out.println("Рік:");
-        year = scanner.nextInt();
+        year = in.nextInt();
         System.out.println("Місяць:");
-        month = scanner.nextInt();
+        month = in.nextInt();
         System.out.println("День:");
-        day = scanner.nextInt();
+        day = in.nextInt();
 
         Calendar calendar = Calendar.getInstance();
         calendar.set(Calendar.YEAR, year);
